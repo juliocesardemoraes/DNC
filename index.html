@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Medicamentos</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Cadastro de Medicamentos</li>
+        <li>Cadastro de Vacinas</li>
+        <li>Cadastro de Cosméticos</li>
+      </ul>
+    </nav>
+    <header>
+      <img src="./med.png" />
+      <div>
+        <h1>Cadastro de Medicamentos</h1>
+        <h3>Farmácia da Gente</h3>
+      </div>
+    </header>
+    <div class="modal">
+      <h1>Desculpe, não foi possível concluir o cadastro</h1>
+      <h1>
+        Você precisa preencher todos os campos para cadastrar o medicamento
+      </h1>
+      <button>OK</button>
+    </div>
+    <main>
+      <form id="formAddMed" onsubmit="addMed()">
+        <label for="medName">Nome do Medicamento</label>
+        <input
+          autocomplete="off"
+          type="text"
+          required
+          id="medName"
+          name="medName"
+          placeholder="Bonpragrip"
+        />
+        <label for="medQuantity">Quantidade Disponível</label>
+        <input
+          autocomplete="off"
+          type="number"
+          required
+          id="medQuantity"
+          name="medQuantity"
+          placeholder="100"
+        />
+        <label for="medPrice">Preço por unidade</label>
+        <input
+          autocomplete="off"
+          type="number"
+          required
+          id="medPrice"
+          name="medPrice"
+          step="any"
+          placeholder="10,50"
+        />
+        <label for="medClass">Classe de Medicamento</label>
+        <input
+          autocomplete="off"
+          type="text"
+          required
+          id="medClass"
+          name="medClass"
+          placeholder="Antibiotico"
+        />
+        <button type="submit">Cadastro</button>
+      </form>
+
+      <div id="formInfo" class="hide">
+        <h2>Novo medicamento adicionado!</h2>
+        <div class="infoContainer">
+          <h3 id="medInfoName">Bonpragrip</h3>
+          <h3 id="medInfoQuantity">100 unidades disponíveis</h3>
+          <h3 id="medInfoPrice">10 reais por unidade</h3>
+        </div>
+        <button onclick="returnForm()">Voltar</button>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
