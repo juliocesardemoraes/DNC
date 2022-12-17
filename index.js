@@ -1,19 +1,16 @@
 const form = document.getElementById("formAddMed");
 
 //PEGAR TODOS OS INPUTS QUE FOREM DESTE FORMULARIO DE ADICIONAR
-const allInputs = infoForm.getElementsByTagName("input");
+const allInputs = form.getElementsByTagName("input");
 const showModal = document.getElementById("modal");
 
-/*
 for (let i = 0; i < allInputs.length; i++) {
   allInputs[i].addEventListener("invalid", function (event) {
     if (event.target.validity.valueMissing) {
-      const showModal = document.getElementById("modal");
       showModal.classList.remove("hide");
     }
   });
 }
-*/
 
 const addMed = () => {
   event.preventDefault();
@@ -50,4 +47,8 @@ const returnForm = () => {
   //APARECER COM O FORM
   const form = document.getElementById("formAddMed");
   form.classList.remove("hide");
+};
+
+const closeModal = () => {
+  showModal.classList.add("hide");
 };

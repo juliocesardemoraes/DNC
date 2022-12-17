@@ -29,12 +29,12 @@
         <h3>Farmácia da Gente</h3>
       </div>
     </header>
-    <div class="modal">
-      <h1>Desculpe, não foi possível concluir o cadastro</h1>
-      <h1>
+    <div id="modal" class="hide">
+      <h2>Desculpe, não foi possível concluir o cadastro</h2>
+      <h3>
         Você precisa preencher todos os campos para cadastrar o medicamento
-      </h1>
-      <button>OK</button>
+      </h3>
+      <button onclick="closeModal()">OK</button>
     </div>
     <main>
       <form id="formAddMed" onsubmit="addMed()">

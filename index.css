@@ -99,3 +99,15 @@ button {
 .hide {
   display: none !important;
 }
+
+#modal {
+  background: #222;
+  color: #fff;
+  padding: 2em;
+}
+
+#modal button {
+  margin-top: 1em;
+  background: #8cadf6;
+  border-radius: 0.1em;
+}
