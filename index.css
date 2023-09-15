@@ -1,0 +1,27 @@
+html {
+  font-size: 1rem;
+}
+
+.fazer__pedido {
+  width: 10rem;
+}
+
+.image__banner {
+  object-fit: cover;
+}
+
+.card {
+  border: 1px solid #edebe9 !important;
+  border-radius: 1em !important;
+}
+
+main,
+nav {
+  background: #f6f5fb !important;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
