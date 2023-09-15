@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Medicamentos</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>Cadastro de Medicamentos</li>
+        <li>Cadastro de Vacinas</li>
+        <li>Cadastro de Cosméticos</li>
+      </ul>
+    </nav>
+    <div class="banner">
+      <img src="./images/medicamento.png" />
+      <div class="info">
+        <h1>Cadastro de medicamentos</h1>
+        <h2>Farmácia da gente</h2>
+      </div>
+    </div>
+    <form id="formMedicamento" onsubmit="cadastro(event)">
+      <label for="nomeMedicamento">Nome do Medicamento</label>
+      <input
+        placeholder="Bonpragrip"
+        id="nomeMedicamento"
+        name="nomeMedicamento"
+        type="text"
+        required
+      />
+      <label for="quantidadeMedicamento">Quantidade Disponível</label>
+      <input
+        placeholder="100"
+        id="quantidadeMedicamento"
+        name="quantidadeMedicamento"
+        type="number"
+        required
+      />
+      <label for="precoMedicamento">Preço por unidade</label>
+      <input
+        placeholder="10,00"
+        id="precoMedicamento"
+        name="precoMedicamento"
+        type="number"
+        required
+      />
+      <label for="classeMedicamento">Classe de Medicamento</label>
+      <input
+        placeholder="Antibiótico"
+        id="classeMedicamento"
+        name="classeMedicamento"
+        type="text"
+        required
+      />
+      <button type="submit">Cadastrar</button>
+    </form>
+    <div id="infoMedicamento">
+      <h3 class="infoTitulo">Novo medicamento adicionado!</h3>
+      <div class="infoContainer">
+        <h3 id="infoNomeMedicamento"></h3>
+        <h3 id="infoQuantidadeMedicamento"></h3>
+        <h3 id="infoPrecoMedicamento"></h3>
+      </div>
+      <button onclick="esconderInfo()">Voltar</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
