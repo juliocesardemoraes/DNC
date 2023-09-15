@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moonow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <img src="./public/logo.svg" />
+        <ul>
+          <li>QUEM SOMOS</li>
+          <li>NOSSO PROPÓSITO</li>
+          <li>SUPORTE</li>
+        </ul>
+      </nav>
+      <main>
+        <form id="form" onsubmit="signUp()">
+          <h1>INSCREVA-SE E VIAJE PARA A LUA GRATUITAMENTE</h1>
+          <div class="column">
+            <input
+              class="input__name"
+              placeholder="Nome Completo"
+              type="text"
+            />
+            <input class="input__email" placeholder="Email" type="email" />
+          </div>
+          <button class="button__primary" type="submit">
+            Quero ir pra lua!
+          </button>
+          <button class="button__secundary">Mais informações</button>
+        </form>
+        <img src="./public/hero.svg" />
+      </main>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
