@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  all: unset;
+}
+
+a:hover button:hover {
+  cursor: pointer;
+}
+
+/* DESIGN SYSTEM*/
+
+/* Typography Figma = https://www.figma.com/file/OnYonn8q4Lasd2Eq1rmflo/FILMEX-DESIGN?node-id=0%3A1*/
+
+:root {
+  --primary-color: #343b47;
+  --secundary-color: #fcd63b;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2.5em;
+  font-weight: 500;
+}
+h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+p {
+  font-size: 0.75em;
+  font-weight: 500;
+}
+span {
+  font-size: 0.6em;
+  font-weight: 300;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p,
+span {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  width: 60px;
+  padding: 12px;
+  text-align: center;
+  height: 20px;
+}
+
+.button__outline {
+  background: rgba(217, 217, 217, 0.1);
+  color: #fff;
+  transition: 0.7s ease-in-out;
+}
+
+.button__outline:hover {
+  background: rgba(217, 217, 217, 0.7);
+}
+
+.button__filled {
+  background: rgba(217, 217, 217, 0.5);
+  color: #fff;
+  transition: 0.7s ease-in-out;
+}
+
+.button__filled:hover {
+  background: rgba(217, 217, 217, 0.8);
+}
+
+/* ---------------- */
+
+/* LOADING SCREEN*/
+#page__loader {
+  height: 100vh;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.not__hidden {
+  display: block;
+}
+
+h3 {
+  color: #fff;
+  max-width: 300px;
+}
+
+/*------------*/
+
+/* MAIN VIDEO PAGE */
+.w__100 {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.main__caller {
+  margin-top: 20%;
+}
+
+.main__button__container {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.responsive__video {
+  display: block;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+}
+
+.responsive__video__shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 202px 102px rgba(0, 0, 0, 0.75);
+  top: 0;
+  left: 0;
+}
+
+.responsive__container {
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+#main__information {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  margin: 2em 4em 0 4em;
+  width: 90%;
+}
+/* ---------------- */
+
+/* MOVIE TRAILERS SECTION */
+.section__container {
+  min-height: 30vh;
+  background: black;
+  color: #fff;
+  padding: 4em;
+}
+
+#latest__movies__trailers {
+  width: 100%;
+  display: flex;
+}
+
+#latest__movies__trailers iframe {
+  width: 854px;
+  height: 480px;
+}
+
+#latest__movies__list {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  overflow-y: auto;
+  height: 480px;
+}
+
+.latest__movies__list__item {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  transition: 0.5s all ease-in-out;
+}
+
+.latest__movies__list__item:hover {
+  background: rgb(118, 111, 111);
+  cursor: pointer;
+}
+
+.latest__movies__list__item__selected {
+  background: rgb(118, 111, 111);
+}
+
+.latest__movies__list__item img {
+  width: 150px;
+  height: 125px;
+}
+
+#latest__movies__trailers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* ---------------- */
+
+/* POPULAR MOVIES  SECTION */
+.grid__three__items {
+  display: flex;
+  width: 90%;
+  overflow-x: scroll;
+  gap: 1em;
+  margin-left: 4em;
+  padding-top: 1rem;
+  padding-left: 40px;
+  scroll-behavior: smooth;
+}
+
+.grid__movie__information {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  visibility: hidden;
+  left: 250px;
+  transition: 0.25s all ease-in-out;
+  padding: 1em;
+}
+
+.grid__movie__information:hover {
+  visibility: visible;
+}
+
+.relative__pos .responsive__video__shadow {
+  box-shadow: -3rem 0 3rem -2rem #000;
+  transition: 0.25s all ease-in-out;
+}
+
+.relative__pos {
+  position: relative;
+  margin-left: -50px;
+  transition: 0.2s all ease-in-out;
+}
+.relative__pos:hover {
+  position: relative;
+  transform: translateY(-1rem) rotate(3deg);
+  margin-right: 50px;
+}
+
+.relative__pos:hover .grid__movie__information {
+  visibility: visible;
+  left: 0px;
+  opacity: 1;
+}
+
+.relative__pos:hover .responsive__video__shadow {
+  box-shadow: inset 0px 80px 40px 20px rgba(0, 0, 0, 0.75) !important;
+}
+
+.grid__three__items img {
+  max-width: 300px;
+  height: 500px;
+  align-items: center;
+  border-radius: 1em;
+}
+
+#popular__movie p {
+  padding: 0 1em;
+}
+
+/* ---------------- */
+/* FOOTER */
+footer {
+  height: 300px;
+  text-align: center;
+  background: #2c2c2c;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0;
+  gap: 3em;
+  margin-top: 5em;
+}
+
+ul li {
+  width: 50px;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  transform: rotate(-30deg) skew(25deg);
+  transition: 1s all ease-in-out;
+}
+
+.logo__container {
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  background: white;
+  transition: 1s all ease-in-out;
+}
+
+li span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  background: white;
+  transition: 1s all ease-in-out;
+}
+
+li:hover .logo__container {
+  transform: translate(30px, -30px);
+  background: #d02d4c;
+  cursor: pointer;
+}
+
+li:hover .logo__blue {
+  background: #0e76a8;
+  cursor: pointer;
+}
+
+li:hover .logo {
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+li:hover span:nth-child(1) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+
+li:hover span:nth-child(2) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+
+li:hover span:nth-child(3) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+
+li:hover span:nth-child(4) {
+  opacity: 0.2;
+}
+
+.logo {
+  width: 20px;
+}
+/* ---------------- */
+
+/* MEDIA QUERY */
+
+@media only screen and (max-width: 815px) {
+  header {
+    flex-direction: column;
+  }
+  #main__information {
+    margin: 1em;
+  }
+  #latest__movies__trailers iframe,
+  #latest__movies__list {
+    width: 100% !important;
+  }
+  #latest__movies__trailers iframe {
+    height: 480px;
+  }
+  #latest__movies__list {
+    max-height: 240px !important;
+  }
+  #latest__movies__trailers {
+    justify-content: center;
+    align-items: center;
+  }
+  #popular__movie {
+    padding-left: 0 !important;
+    max-width: 90%;
+    margin-left: 1em !important;
+  }
+
+  .section__container {
+    padding: 1em;
+  }
+
+  .relative__pos:hover {
+    transform: translateY(-0.1rem) rotate(3deg) !important;
+  }
+
+  .grid__movie__information {
+    margin-left: 2em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #latest__movies__list,
+  #latest__movies__trailers iframe {
+    width: 640px;
+    height: 480px;
+  }
+  #latest__movies__trailers {
+    flex-direction: column !important;
+  }
+}
+
+/* ---------------- */

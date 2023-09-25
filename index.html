@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Moviex - Descubra o cinema</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      name="description"
+      content="MOVIEX é um website para análise de filmes, e atualizado com as notícias do cinema"
+    />
+    <meta property="og:title" content="Moviex - Descubra o cinema" />
+    <meta property="og:site_name" content="Moviex - Descubra o cinema" />
+    <meta property="og:url" content="https://pucwebdesign.github.io/" />
+    <meta property="og:description" content="Acervo de análise de filmes" />
+    <meta
+      property="og:image"
+      itemprop="image"
+      content="https://i.imgur.com/PvdDJ4w.png"
+    />
+    <meta property="og:updated_time" content="1666460308506" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt-BR" />
+    <meta
+      property="og:video"
+      content="https://giant.gfycat.com/PleasingCornyInvisiblerail.mp4"
+    />
+  </head>
+
+  <body onload="renderAllMovies()">
+    <section id="page__loader">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <h3>Estamos Carregando seus filmes, aguarde um pouco</h3>
+    </section>
+    <section id="page__loaded">
+      <section id="latest__movies">
+        <main id="latest__movies__main">
+          <div class="responsive__container">
+            <video
+              id="video__source"
+              class="responsive__video w__100"
+              autoplay
+              loop
+              muted
+              defaultmuted
+              playsinline
+            >
+              <source
+                controls="false"
+                src="https://giant.gfycat.com/ScholarlyAntiqueDormouse.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div class="responsive__video__shadow w__100"></div>
+            <div id="main__information">
+              <header class="w__100">
+                <h1>MOVIEX</h1>
+                <a href="/pesquisa.html">
+                  <button class="button__outline">
+                    <span>Pesquisar Filmes</span>
+                  </button>
+                </a>
+              </header>
+              <div class="main__caller">
+                <h2>Descubra novos filmes</h2>
+                <h3>Veja trailers, análises e muito mais</h3>
+                <div class="main__button__container">
+                  <a href="#latest__movies__trailers">
+                    <button class="button__filled">
+                      <span>Últimos filmes</span>
+                    </button>
+                  </a>
+                  <a href="/pesquisa.html">
+                    <button class="button__outline">
+                      <span>Pesquisar Filmes</span>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+      <section class="section__container">
+        <h3 style="margin-bottom: 1em">Trailers dos últimos filmes</h3>
+        <div id="latest__movies__trailers" class="w__100"></div>
+      </section>
+      <section class="section__container">
+        <h3 style="margin-bottom: 1em">Filmes populares</h3>
+        <div id="popular__movie" class="grid__three__items"></div>
+      </section>
+      <footer>
+        <h1>MOVIEX</h1>
+        <span>
+          Video do interstellar feito por: VISUALDON
+          https://www.youtube.com/watch?v=0-W0jMjGmVk
+        </span>
+        <ul>
+          <li>
+            <div class="logo__container logo__red w__100">
+              <img class="logo" src="./public/logo/email.svg" />
+            </div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+          <li>
+            <div class="logo__container logo__blue w__100">
+              <img class="logo" src="./public/logo/linkedin.svg" />
+            </div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+          <li>
+            <div class="logo__container logo__blue w__100">
+              <img class="logo" src="./public/logo/facebook.svg" />
+            </div>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+        </ul>
+      </footer>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script defer async src="index.js"></script>
+  </body>
+</html>
