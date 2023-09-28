@@ -1,0 +1,389 @@
+*{
+margin: 0px;
+font-family: inter;
+
+
+}
+
+#logo {
+
+    margin-left: 50px;
+    margin-top: 50px;
+
+}
+
+#titlems {
+
+    margin-left: 150px;
+    margin-top: 75px;
+
+}
+
+#textms {
+
+    margin-left: 150px;
+    margin-top: 25px;
+    padding-bottom: 100px;
+
+}
+
+#menusup {
+    background-image: url(../img/menusup/fundoms.svg);
+    color: aliceblue;
+
+}
+
+/*fim menusup aqui*/
+
+#menuinf {
+
+background-color: #eaece5;
+display: grid;
+grid-auto-flow: column;
+columns: auto;
+
+}
+
+.icones {
+
+    margin: 50px 0px 50px 100px;
+
+}
+
+/*fim menuinf aqui*/
+
+
+#secvi {
+
+    display: grid;
+    grid-auto-flow: column;
+    columns: auto;
+ }
+
+.texti {
+
+display: flex;
+align-items: center;
+
+}
+
+
+
+#titulovi {
+  color: #247ba0;
+  margin-top: 50px;
+}
+
+#video {
+
+    margin: 50px 25px 50px 100px;
+
+}
+
+/*fim do secvi aqui*/
+
+
+#carrossel
+
+{
+    background-color: #247ba0;
+    padding: 50px;
+}
+
+#titulocr {
+   color: white;
+   text-align: center;
+   font-size: 25px;
+}
+
+#cards
+{
+display: grid;
+grid-auto-flow: column;
+margin-top: 25px;
+
+}
+
+.icr  {
+margin-left: 80px;
+object-fit: cover;
+
+}
+
+#brun {
+
+display: none;
+
+}
+
+#sama{
+
+display: none;
+
+}
+
+#setadir
+{
+
+margin-top: 10%;
+display: none;
+
+}
+
+
+
+.setas {
+
+    margin-top: 55%;
+    cursor: pointer;
+
+}
+
+
+.setas:hover{
+
+    transform: translateY(-7px);
+    transition-duration: 0.5s;
+}
+
+/*fim do carrossel aqui*/
+
+#formulario {
+
+    text-align: center;
+
+}
+
+#titulo-form {
+
+    font-size: 25px;
+    margin: 30px;
+    color: #383838;
+
+}
+
+input {
+
+    width: 300px;
+    height: 40px;
+    background-color: #eaece5;
+    margin: 15px;
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 10px;
+
+}
+
+button {
+
+   background-color: #247ba0;
+   width: 250px;
+   height: 40px;
+   color: #eaece5;
+   border: 0px;
+   border-radius: 5px;
+   margin-bottom: 50px;
+   font-weight: bolder;
+   cursor: pointer;
+}
+
+button:hover {
+
+background-color: #318fb8;
+color: white;
+transform: translateY(-7px);
+box-shadow: 0px 15px 20px #05103081;
+transition-duration: 0.5s;
+
+}
+
+@media only screen and (max-width:600px){
+
+/*menu superior*/
+
+#menusup {
+
+flex-shrink: 0;
+
+}
+
+#logo{
+
+        width:20%;
+        margin-left: 3.66%;
+        margin-top: 3.66%;
+
+    }
+
+#titlems {
+
+        margin-left: 10.98%;
+        margin-top: 5.49%;
+        font-size: 20px;
+        
+
+    }
+
+    #textms {
+
+        margin-left: 10.98%;
+        margin-top: 1.83%;
+        padding-bottom: 7.32%;
+        font-size: 11px;
+        padding-top: 5%;
+        
+    }
+
+
+/*menu informacional*/
+
+.icones {
+
+    margin: 3.66% 0% 3.66% 7.32%;
+    width: 25%;
+    
+
+}
+
+.texti {
+
+font-size: 68%;
+padding-top: 10%;
+padding-bottom: 10%;
+
+
+}
+
+.mtcon {
+
+padding-left: 5%;
+
+}
+
+
+/*secvi*/
+
+#secvi {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+#video {
+
+width: 100%;
+
+
+}
+
+
+
+
+#titulovi {
+    color: #247ba0;
+    margin-top: 5.49%;
+    font-size: 20px;
+    text-align: center;
+
+
+}
+
+
+#textovi {
+
+font-size: 11px;
+padding-bottom: 10%;
+text-align: center;
+
+}
+
+#video {
+
+    margin: 5%;
+
+}
+
+/*carossel*/
+    
+
+
+
+#carrossel {
+    padding: 3.66%;
+    align-items: center;
+}
+
+#titulocr {
+   
+    font-size: 16px;
+}
+
+#cards {
+    margin-top: 1.83%;
+
+}
+
+.icr {
+    margin-left: 1%;
+    width: 150px;
+    align-items: center;
+
+}
+
+
+
+#brun {
+
+margin-left: 14.5%;
+padding-bottom: 26%;
+
+}
+
+
+/*fim do carrossel aqui*/
+
+#formulario {
+
+    text-align: center;
+
+}
+
+#titulo-form {
+
+    font-size: 19px;
+    margin: 30px;
+   
+}
+
+input {
+
+    width: 300px;
+    height: 40px;
+    margin: 15px;
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 10px;
+
+}
+
+button {
+
+    width: 250px;
+    height: 40px;
+    border: 0px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+button:hover {
+
+    transform: translateY(-7px);
+    box-shadow: 0px 15px 20px #05103081;
+    transition-duration: 0.5s;
+
+}
+
+}
